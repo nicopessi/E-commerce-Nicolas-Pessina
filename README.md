@@ -6,7 +6,7 @@
  <img src="https://github.com/yourusername/yourrepo/blob/main/assets/yourimage.png">
 </p>
 
-![GitHub followers](https://img.shields.io/github/followers/nicopessi?style=social)
+
 
 ## Sobre mí
 
@@ -46,14 +46,4 @@
 - [Guía sobre React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [Guía sobre React Router](https://reactrouter.com/)
 
-<br>
 
-## ⚙️ &nbsp;GitHub Analytics
-
-<br>
-<p align="center">
-<a href="https://github.com/nicopessi">
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=nicopessi&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=nicopessi&layout=compact&langs_count=8&theme=algolia"/>
-</a>
-</p>
