@@ -1,24 +1,33 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { NavBar } from './Components/NavBar'
-import { Home } from './views/Home'
 import { Error404 } from './views/Home404'
-import { Products } from './views/Products'
-import { ProductDetail } from './views/ProductDetail'
+import { ItemListContainer} from './Components/ItemListContainer'
+import { ItemDetailContainer } from './Components/ItemDetailContainer'
 import "./index.css"
+import { Provider } from "./context/ItemsContext"
+import { Cart } from "./Components/Cart"
+import  QuienesSomos  from "./views/QuienesSomos"
+import ContactUs  from "./views/Contact"
+import Purchases from "./views/Checkout"
 
 function App() {
    return (
+      <Provider>
       <BrowserRouter>
    <NavBar />
    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/model/:model" element={<Products />} />
-      <Route path="/products/:id" element={<ProductDetail />} />
+      <Route path="/QuienesSomos" element={<QuienesSomos />} />
+      <Route path="/ContactUs" element={<ContactUs />} />
+      <Route path="/" element={<ItemListContainer />} />
+      <Route path="/category/:id" element={<ItemListContainer />} />
+      <Route path="/products/:id" element={<ItemDetailContainer />} />
       <Route path="*" element={<Error404 />} />
-      <Route path="/category/:categoryId" element={<Home />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/Checkout" element={<Purchases />} />
    </Routes>
    
    </BrowserRouter>
+   </Provider>
    )
 }
 

@@ -1,9 +1,8 @@
-import { Container } from "react-bootstrap"
+
+import error from "../assets/error.png"
 
 export const Error404 = () => {
-	return (
-		<Container className="mt-4">
-			<h1>Dónde estoy?</h1>
-		</Container>
+	return(
+			<img src={error} alt="error" style={{display: 'flex', margin: 'auto'}} />
 	)
 }

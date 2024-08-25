@@ -1,12 +1,21 @@
 import cart from '../assets/cart.png'; 
-import logo from '../assets/djilogo.png';	
+import logo from '../assets/djilogo.png';
+import { Link } from 'react-router-dom';
+import { useContext } from "react";
+import { ItemsContext } from "../context/ItemsContext";
 
-export const CartWidget = () => 
-<> 
+
+export const CartWidget = () => {
+    const {items} = useContext(ItemsContext);
+    const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
+
+    return (
+        <Link to={"/cart"}> 
 <img src={cart} height={40} alt="carrito" />
-<span>0</span>
-
-</>;
+{totalQuantity > 0 && <span>{totalQuantity}</span>}
+</Link>
+    )
+}
 
 export const Logo = () => 
 <> 
